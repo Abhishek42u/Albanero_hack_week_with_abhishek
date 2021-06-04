@@ -1,0 +1,24 @@
+def sona(l,k):
+  for i in range(1,k+1):
+    m=min(l)
+    if(m<0):
+      j=l.index(m)
+      l[j]=abs(m)
+ 
+if __name__=="__main__":
+  l=list(map(int,input().split(',')))
+  k=int(input())
+  n=[i for i in l if i <0]
+  p=len(n)
+  if(k<=p):
+    sona(l,k)
+  else:
+    r=k-p
+    sona(l,p)
+    if(r%2==1):
+      m=min(l)
+      j=l.index(m)
+      l[j]=m-2*m
+  h=sum(l)    
+  print(h)
+    

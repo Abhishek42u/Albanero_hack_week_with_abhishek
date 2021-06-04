@@ -1,0 +1,9 @@
+if __name__=="__main__":
+  
+  sona=[4,1,6,34]
+  s=sum(sona)
+  if(s%2==1):
+    print("odd")
+  else:
+    print("even")
+  

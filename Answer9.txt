@@ -1,0 +1,13 @@
+def maxProfit(p,s,r):
+    if(s==r):
+        return 0;
+    a= 0;
+    for i in range(s,r):
+        j=i+1
+        if(p[j]>p[i]):
+            a=a+(p[j]-p[i])
+    return a
+if __name__ == '__main__':
+    p = [67,34,25,67,11,23]
+    n = len(p)
+    print(maxProfit(p,0,n-1))

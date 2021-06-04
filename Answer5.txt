@@ -1,0 +1,14 @@
+if __name__=="__main__":
+  
+  sona=list(map(int,input().split(',')))
+  p=[]
+  q=[]
+  for i in sona:
+    if(i%2==1):
+      q.append(i)
+    else:
+      p.append(i)
+  if(len(p)>len(q)):
+    print(q[0])
+  else:
+    print(p[0])

@@ -1,0 +1,11 @@
+if __name__=="__main__":
+  
+  sona=list(map(int,input().split(',')))
+  
+  for k in sona:
+    
+    if(k==sona[-1]):
+      print(k+1)
+    
+    else:
+      print(k+1,end=', ')

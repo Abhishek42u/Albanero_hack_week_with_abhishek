@@ -1,0 +1,10 @@
+if __name__=="__main__":
+  
+  n=int(input())
+  s=""
+  if(n%2==1):
+      s=s+'a'*n
+  else:
+      s=s+'a'*(n-1)
+      s+='b'
+  print(s)

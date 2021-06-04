@@ -1,0 +1,8 @@
+if __name__=="__main__":
+  sona=list(map(int,input().split(',')))
+  for i in sona:
+    if(i%2==0):
+       if(i==sona[-1]):
+         print(i,end=", ")
+       else:
+         print(i,end=", ")

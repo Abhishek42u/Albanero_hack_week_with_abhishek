@@ -1,0 +1,13 @@
+if __name__=="__main__":
+  
+  a=int(input("First number = "))
+  d=int(input("Difference = "))
+  n=int(input("n = "))
+  
+  for i in range(n):
+    if(i<n-1):
+        print(a+d*i,end=', ')
+    else:    
+        print(a+d*i)
+    
+      

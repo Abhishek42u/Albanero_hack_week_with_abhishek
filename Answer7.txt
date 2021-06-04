@@ -1,0 +1,19 @@
+def sona(a,n,k):
+    p=0
+    i = 0
+    Max = 0
+    for j in range(n):
+        if a[j] == 0:
+            p= p+ 1
+        while(p>k):
+            if a[i] == 0:
+                p=p- 1
+            i=i+ 1
+        Max = max(Max,j-i+1);
+    return Max
+    
+if __name__=="__main__":
+  a = [1,0,1,0,1,0,0,0,1,1,1,1,1,0,1]
+  n = len(a)
+  p = 2
+  print(Sona(a,n,2))
