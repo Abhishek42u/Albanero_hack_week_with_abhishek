@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int p,r,c,i,j;
+    cout<<"Enter the total number of rows: ";
+    cin>>r;
+    cout<<"Enter the total number of column: ";
+    cin>>c;
+    int a[r][c];
+    cout<<"Enter the elements: ";
+    for(i=0;i<r;i++)
+        for(j=0;j<c;j++)
+            cin>>a[i][j];
+    p=0;        
+    for(i=0;i<r;i++)
+        for(j=0;j<c;j++)
+            if(a[i][j]%2==0)
+                p+=a[i][j];
+    cout<<"Sum of all even elements are "<<p;            
+    return 0;
+}

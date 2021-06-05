@@ -1,0 +1,7 @@
+if __name__=="__main__":
+    s=list(map(int,input("Enter comma seperated 10 numbers: ").split(",")))
+    sum=0
+    s.sort(reverse=True)
+    for i in range(5):
+        sum+=s[i]
+    print(sum)

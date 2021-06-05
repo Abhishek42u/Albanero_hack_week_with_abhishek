@@ -1,0 +1,30 @@
+def sona(s,p):
+    k=[]
+    r=[]
+    for i in s:
+       k.append(change(i))
+    p = change(p)
+    for i in range(len(s)):
+       if k[i] == p:
+          r.append(s[i])
+    return r
+def change(w):
+    c = 1
+    s = str(1)
+    for i in range(1,len(w)):
+       j= i-1
+       while j>=0:
+         if w[i] == w[j]:
+             break
+         j-=1
+       if j >-1:
+          s+=s[j]
+       else:
+          c+=1
+          s+=str(c)
+    return s
+if __name__=="__main__":
+  s=["abc","deq","mee","aqq","dkd","ccc"]
+  p="abb"
+  x=sona(s,p)
+  print(x)

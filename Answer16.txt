@@ -1,0 +1,13 @@
+if __name__=="__main__":
+    s=list(map(int,input("Enter comma seperated numbers: ").split(",")))
+    p=0
+    sum=0
+    for i in s:
+        if(i>0):
+            p+=1
+        else:
+            sum+=i
+    L=[]
+    L.append(p)
+    L.append(sum)
+    print(L)

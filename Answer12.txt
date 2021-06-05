@@ -1,0 +1,17 @@
+if __name__=="__main__":
+    s=input()
+    L = list(s)
+    a = []
+    while L:
+        q = list(set(L))  
+        q.sort()  
+        for i in q:
+            a.append(i)
+            L.remove(i)
+        q = list(set(L))
+        q.sort(reverse=True)
+        for i in q:
+            a.append(i)
+            L.remove(i)
+    p=''.join(a)
+    print(p)

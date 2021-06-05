@@ -1,0 +1,7 @@
+if __name__=="__main__":
+    s=list(map(int,input().split()))
+    L=[]
+    for i in s:
+        if(i%2==0):
+            L.append(i)
+    print(L)
