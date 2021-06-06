@@ -1,0 +1,11 @@
+if __name__=="__main__":
+    s=input()
+    p=0
+    for i in s:
+        if(i=='1'):
+            p+=1
+    if(p&1):
+        s+='1'
+    else:
+        s+='0'
+    print(s)    
