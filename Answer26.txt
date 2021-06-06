@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+#include <iostream>
+#define ll long long int
+using namespace std;
+
+int main()
+{
+    string a;
+    cin>>a;
+    ll j,p,k=1;
+    if(a.size()!=1){ 
+        p=stoi(a);
+        if(p<0) {
+            k=0;
+        }
+        else
+        for(ll i=1;i<a.size();i++){
+             if(a[i]!=a[i-1]){
+                k=0;
+                break;
+             }
+        }
+    }
+    if(k) 
+        cout<<"true";
+    else 
+        cout<<"false";
+    
+    return 0;
+}

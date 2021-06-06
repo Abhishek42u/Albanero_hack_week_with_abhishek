@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int p,r,c,i,j,k;
+    cout<<"Enter the total number of rows: ";
+    cin>>r;
+    cout<<"Enter the total number of column: ";
+    cin>>c;
+    int a[r][c];
+    cout<<"Enter the elements: ";
+    for(i=0;i<r;i++)
+        for(j=0;j<c;j++){
+            cin>>k;
+            a[i][j]=k^1;
+        }
+    cout<<"After reversing the image\n";       
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++)
+            cout<<a[i][j]<<" ";
+        cout<<"\n";    
+    }
+    return 0;
+}

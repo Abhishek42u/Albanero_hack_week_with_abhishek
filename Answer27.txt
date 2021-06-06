@@ -1,0 +1,13 @@
+if __name__=="__main__":
+    def arrayofMultiples(num,length):
+        L=[]
+        p=num
+        for i in range(length):
+            L.append(num)
+            num=num+p
+        return L    
+    
+    num=int(input("Enter the value of num: "))
+    length=int(input("Enter the length: "))
+    print(arrayofMultiples(num,length))
+    

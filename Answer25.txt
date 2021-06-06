@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+#include <iostream>
+#define ll long long int
+using namespace std;
+
+int main()
+{
+    string a;
+    cin>>a;
+    set<char>s;
+    for(ll i=0;i<a.size();i++){
+        if(isupper(a[i]))
+            a[i]=tolower(a[i]);
+        s.insert(a[i]);    
+    }
+    if(a.size()==s.size()) 
+        cout<<"true";
+    else 
+        cout<<"false";
+    
+    return 0;
+}

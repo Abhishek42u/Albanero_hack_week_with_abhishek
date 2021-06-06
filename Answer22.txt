@@ -1,0 +1,101 @@
+#include<stdio.h>
+void create_list();
+void traverse_list();
+void swap();
+int length_list();
+struct node{
+	int data;
+	struct node*link;
+}*head,*temp;
+
+int main()
+{
+	printf("To create a list : \n");
+    create_list();
+    while(1)
+   {
+		int a;
+	    printf("\nEnter 1 to traverse the list.");
+        //Swap every two adjacent nodes
+	    printf("\nEnter 2 to swap every two adjacent nodes.");
+	    printf("\nEnter 0 to exit list. ");
+	    printf("\nEnter your choice : ");
+	    scanf("%d",&a);
+        if(a==1)
+           traverse_list();
+		else if(a==2){
+			swap();
+		    printf("\nSwapping of every two adjacent nodes is done.");	
+		}
+		else if(a==0)		  
+		    return 0;
+        else
+		    printf("Invalid choice, try again!!\n");    
+   }
+    return 0;
+}
+
+void create_list()
+{
+	int i=1;
+	struct node *new_node;
+    head=NULL;
+    while(i)
+	{
+	    new_node=(struct node*)malloc(sizeof(struct node));
+	    printf("Enter the data : ");
+	    scanf("%d",&new_node->data);
+	    new_node->link=NULL;
+	    if(head==NULL)
+	       {
+	   	        head=temp=new_node;
+	       }
+	    else
+	       {
+	            temp->link=new_node;
+			    temp=new_node;	
+	       }
+	    printf("To add another node press 1 either 0 : ");
+	    scanf("%d",&i);
+    }
+}
+
+void traverse_list()
+{
+	int i=0;
+	temp=head;
+    while(temp!=NULL)
+        {
+        	i++;
+        	printf("The for node %d, data is %d and address is %u\n",i,temp->data,temp);
+        	temp=temp->link;
+		}	
+}
+
+int length_list()
+{
+	int i=0;
+	temp=head;
+    while(temp!=NULL)
+        {
+        	i++;
+        	temp=temp->link;
+		}
+	return i;	
+}
+
+void swap()
+{
+	struct node *p;
+	temp=p=head;
+	temp=temp->link;
+	int a;
+	while(1){
+		a=p->data;
+		p->data=temp->data;
+		temp->data=a;
+		p=temp->link;
+		if(p==NULL||p->link==NULL) break;
+		temp=p->link;
+	}
+}
