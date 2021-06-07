@@ -1,0 +1,11 @@
+a,b=input("Enter space seperated number: ").split()
+k=0
+l=0
+for i in range(len(a)):
+   k+=int(a[i])
+for i in range(len(b)):
+   l+=int(b[i])
+if(k==l):
+    print("true")
+else:
+    print("false")   

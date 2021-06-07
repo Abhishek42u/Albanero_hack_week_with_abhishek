@@ -1,0 +1,6 @@
+a,b=input("Enter space seperated same length number: ").split()
+k=0
+for i in range(len(a)):
+   p=abs(int(a[i])-int(b[i]))
+   k+=p
+print("The total value of the distance between each pair of digit: ",k)   

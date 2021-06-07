@@ -1,0 +1,16 @@
+#include <iostream>
+#include<bits/stdc++.h>
+#define ll long long int
+using namespace std;
+ 
+int main()
+{
+    ll n;
+    cin>>n;
+    ll a[n+1],i;
+    for(i=0;i<=n;i++)
+        a[i]=__builtin_popcount(i);
+    for(i=0;i<=n;i++)
+        cout<<a[i]<<" ";
+    return 0;
+}

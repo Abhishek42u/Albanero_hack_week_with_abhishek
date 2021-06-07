@@ -1,0 +1,6 @@
+s=input("Enter space seperated names: ").split()
+for i in range(len(s)):
+    if(s[i][0].islower()):
+        s[i]=s[i].capitalize()
+print(s)        
+    

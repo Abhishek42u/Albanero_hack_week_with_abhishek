@@ -1,0 +1,10 @@
+a=int(input("Enter the number: "))
+if(a<=2):
+    print("The total no. of distinct ways to climb to the top are",a)
+else:    
+    s=[0]*a
+    s[0]=1
+    s[1]=2
+    for i in range(2,a):
+        s[i]=s[i-1]+s[i-2]
+    print("The total no. of distinct ways to climb to the top are",s[a-1])    

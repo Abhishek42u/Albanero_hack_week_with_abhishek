@@ -1,0 +1,9 @@
+l=int(input("Enter the length of array: "))
+n=int(input("Enter the length of subarray of array: "))
+L=[]
+for i in range(l):
+    print("Enter the",n,"values of",i,"index array in space seperated: ")
+    k=list(map(int,input().split()))
+    L.append(max(k))
+print("The array with lagest number of each subarray",L)    
+        
