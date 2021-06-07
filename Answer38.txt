@@ -1,0 +1,10 @@
+a = [1,100,1,1,1,100,1,1,100,1]
+n = len(a)
+r = 0
+s = 0
+for i in range(n):
+    temp=a[i]+min(r,s)
+    s=r
+    r=temp
+p=min(r,s)
+print(p)

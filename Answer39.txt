@@ -1,0 +1,10 @@
+a=list(map(int,input("Enter the number: ").split()))
+k=a[0]
+s=0
+for i in a:
+    s+=i
+    if(s>k):
+        k=s
+    if(s<0):
+        s=0
+print("The largest sum of contiguous subarray",k)
