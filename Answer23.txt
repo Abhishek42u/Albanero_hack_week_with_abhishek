@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+struct Node{
+    int data;
+    struct Node *next;
+};
+
+struct Node *head = new struct Node;
+
+int size;
+void insert(){
+    head->next = NULL;
+
+    cin>>size;
+    struct Node *ptr = head;
+    for(int i  = 0; i<size; i++){
+    int val;
+    cin>>val;
+    
+    while(ptr->next!=NULL){
+        ptr = ptr->next;
+    }
+    struct Node *temp = new struct Node;
+    temp->data = val;
+    temp->next = NULL;
+    ptr->next = temp;
+    
+}
+}
+
+void display(){
+    
+    struct Node *ptr = head->next;
+    while(ptr!=NULL){
+        cout<<ptr->data<<" ";
+        ptr = ptr->next;
+    }
+    cout<<endl;
+}
+
+
+int main(){
+ 
+    insert();
+    
+    struct Node *ptr = head->next;
+    
+    struct Node *temp = head ->next;
+    
+    struct Node *it = head->next;
+    
+    int count = 0;
+    
+    int jumps = size-1;
+    
+    while(count<=size/2){
+        if(count == size/2)
+        {
+            ptr->next = NULL;
+            break;
+        }
+        
+        it = temp;
+        
+        ptr = ptr->next;
+
+        
+        for(int i = 0; i<jumps; i++){
+        it = it->next;
+        }
+        jumps=jumps - 2;
+
+        temp->next = it;
+        it->next = ptr;
+        count++;
+        temp = ptr;
+        
+    }
+    
+    display();
+    
+  return 0;
+}
+

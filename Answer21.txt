@@ -1,0 +1,81 @@
+
+#include <iostream>
+using namespace std;
+
+struct Node{
+    int data;
+    struct Node *next;
+};
+
+struct Node *head = new struct Node;
+
+
+int sz;
+
+void insert(){
+    head->next = NULL;
+    cin>>sz;
+    struct Node *ptr = head;
+    for(int i  = 0; i<sz; i++){
+    int val;
+    cin>>val;
+    
+    while(ptr->next!=NULL){
+        ptr = ptr->next;
+    }
+    struct Node *temp = new struct Node;
+    temp->data = val;
+    temp->next = NULL;
+    ptr->next = temp;
+    
+}
+}
+
+void display(){
+    
+    struct Node *ptr = head->next;
+    while(ptr!=NULL){
+        cout<<ptr->data<<" ";
+        ptr = ptr->next;
+    }
+    cout<<endl;
+}
+
+
+int main(){
+ 
+    insert();
+    
+    if(sz <= 2){
+    struct Node *ptr = head->next;
+    while(ptr!=NULL){
+        cout<<ptr->data<<" ";
+        ptr = ptr->next;
+    }
+    cout<<endl;
+    return 0;
+    }
+    
+    
+    struct Node *odd = head->next;
+    
+    struct Node *even = head ->next ->next;
+    
+    struct Node *ptr = head ->next ->next;
+    
+    while(odd->next != NULL&& even->next != NULL){
+        odd->next=even->next;
+        odd=even->next;
+        if(odd->next != NULL){
+            even->next=odd->next;
+            even=odd->next;
+        }
+        else{
+            even->next=NULL;
+        }
+    }
+    odd->next=ptr;
+    
+    display();
+  return 0;
+}
