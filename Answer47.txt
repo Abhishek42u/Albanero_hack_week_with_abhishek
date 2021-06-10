@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+struct Node{
+    int data;
+    struct Node *next;
+};
+
+struct Node *head = new struct Node;
+
+
+int size_list;
+void insert(){
+    head->next = NULL;
+    cin>>size_list;
+    struct Node *ptr = head;
+    for(int i  = 0; i<size_list; i++){
+    int val;
+    cin>>val;
+    
+    while(ptr->next!=NULL){
+        ptr = ptr->next;
+    }
+    struct Node *temp = new struct Node;
+    temp->data = val;
+    temp->next = NULL;
+    ptr->next = temp;
+    
+}
+}
+
+void display(){
+    
+    struct Node *ptr = head->next;
+    while(ptr!=NULL){
+        cout<<ptr->data<<" ";
+        ptr = ptr->next;
+    }
+    cout<<endl;
+}
+
+
+int main(){
+ 
+    insert();
+    
+    bool flag = true;
+    int jump = size_list-1;
+    
+    struct Node *start = head->next;
+    
+    for(int i = 0; i< size_list/2; i++){
+        struct Node *end = start;
+        for(int j = 0; j<jump; j++)
+        end = end->next;
+        jump -= 2;
+        if(start->data != end->data){
+            flag = false;
+            break;
+        }
+        start = start->next;
+    }
+    
+    if(flag)
+    cout<<"True"<<endl;
+    else
+    cout<<"False"<<endl;
+  return 0;
+}

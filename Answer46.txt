@@ -1,0 +1,23 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#define ll long long int
+using namespace std;
+int main(){
+	string s;
+	getline(cin,s);
+	bool flag = true;
+	if(!isupper(s[0]))
+	    flag = false;
+	if(s[s.length()-1] != '.')
+	    flag = false;
+	for(ll i = 0; i<s.length()-1; i++)
+	    if(isupper(s[i]) && isupper(s[i+1])){
+	        flag = false;
+	        break;
+	    } 
+	if(flag)
+    	cout<<"True"<<endl;
+	else
+	    cout<<"False"<<endl;
+	return 0;
+}
